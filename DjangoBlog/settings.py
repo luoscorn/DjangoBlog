@@ -143,11 +143,13 @@ USE_TZ = True
 
 
 HAYSTACK_CONNECTIONS = {
-    'default': {
-        'ENGINE': 'DjangoBlog.whoosh_cn_backend.WhooshEngine',
-        'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index'),
-    },
-}
+             'default': {
+                          'ENGINE': 'DjangoBlog.whoosh_cn_backend.WhooshEngine',
+                                   'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index'),
+                                        },
+              }
+
+
 # Automatically update searching index
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 # Allow user login with username and password
